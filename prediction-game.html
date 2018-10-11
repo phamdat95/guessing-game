@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [];
+    for (var j = 0; j <= 100; j++){
+        arr.push(j);
+    }
+    var valueScret = Math.floor(Math.random()*100);
+    function isLinear(arr,value) {
+        for (var i = 0;i < arr.length;i++) {
+            if (arr[i] === value) {
+                document.write(arr[i]+' is the scret number');
+                break;
+            }
+        }
+    }
+    isLinear(arr,valueScret);
+    document.write('<br>');
+    function isBinary(arr, value) {
+        var j=Math.floor((arr.length)/2);
+        if (arr[j] === value){
+            document.write(arr[j]+' is the scret number');
+        }
+        if (arr[j] < value){
+            for (var i = j + 1; i < arr.length; i++) {
+                if (arr[i]=== value)
+                    document.write(arr[i]+' is the scret number');
+            }
+        } else for (var k = j-1;k >= 0;k--){
+            if (arr[k]=== value)
+                document.write(arr[k]+' is the scret number');
+        }
+    }
+    isBinary(arr,valueScret);
+</script>
+</body>
+</html>
